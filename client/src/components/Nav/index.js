@@ -42,7 +42,7 @@ class Nav extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/expensereport">
           <h3>RHMA Insights</h3>
         </Link>
 
@@ -64,7 +64,7 @@ class Nav extends Component {
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/ExpenseReport"
+                to="/expensereport"
               >
                 Expense Report
               </Link>
@@ -73,7 +73,7 @@ class Nav extends Component {
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/BusinessAnalysis" ? "nav-link active" : "nav-link"}
-                to="/BusinessAnalysis"
+                to="/businessanalysis"
               >
                 Business Analysis
               </Link>
@@ -83,7 +83,7 @@ class Nav extends Component {
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/ShoppingItems" ? "nav-link active" : "nav-link"}
-                to="/ShoppingItems"
+                to="/shoppingitems"
               >
                 Purchases
               </Link>

@@ -102,6 +102,7 @@ class ExpenseReport extends Component {
                       advertising={expense.volumeInfo.advertising.join(", ")}
                       utilities={expense.volumeInfo.utilities}
                       Button={() => (
+                        
                         <button
                           onClick={() => this.handleExpenseSave(expense.id)}
                           className="btn btn-primary ml-2"

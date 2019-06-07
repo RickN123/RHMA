@@ -47,7 +47,7 @@ class BusinessAnalysis extends Component {
                 <strong>Business Analysis Visual</strong>
 
               </h1>
-              <h2 className="text-center">Review Your Insights Below</h2>
+              <h2 className="text-center">Review Your Monthly Insights Below</h2>
             </Jumbotron>
           </Col>
         </Row>
