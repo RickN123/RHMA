@@ -17,23 +17,24 @@ class Report extends Component {
     }
 
 
-    render() {
-        axios.get("/api/expense").then(res => {
-            res = res.data;
-            console.log(res[0].payroll);
-            this.setState({
-                expenseData : [
-                    ["Expense", "Amount"],
-                    ["advertising", res[0].advertising],
-                    ["insurance", res[0].insurance],
-                    ["payroll", res[0].payroll],
-                    ["rentMortgage", res[0].rentMortgage],
-                    ["utilities", res[0].utilities]
-                ]
-            })
-
+componentDidMount() {
+    axios.get("/api/expense").then(res => {
+        res = res.data;
+        console.log(res[0].payroll);
+        this.setState({
+            expenseData : [
+                ["Expense", "Amount"],
+                ["advertising", res[0].advertising],
+                ["insurance", res[0].insurance],
+                ["payroll", res[0].payroll],
+                ["rentMortgage", res[0].rentMortgage],
+                ["utilities", res[0].utilities]
+            ]
         });
+    })
+}
 
+    render() {
         return (
             <div className="chart-container">
 
@@ -56,6 +57,8 @@ class Report extends Component {
         );
     }
 }
+
+
 export default Report;
 
 // expenseData : [
